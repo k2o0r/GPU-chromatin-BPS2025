@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GPU accelerated chromatin</title>
+  <title>GPU Accelerated Chromatin</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -34,13 +34,20 @@
       margin-bottom: 20px;
     }
     .video-container video {
-      flex: 1 1 45%; /* Each video takes roughly 45% of the width */
+      flex: 1 1 45%; /* Each video takes roughly 45% of the container's width */
       width: 100%;
-      height: auto;
-      aspect-ratio: 9 / 16;  /* This sets the video to be narrower and taller (portrait) */
-      object-fit: cover;     /* This ensures the video fills the container, cropping if necessary */
+      /* Maintain a portrait orientation: narrower and taller */
+      aspect-ratio: 9 / 16;  
+      object-fit: cover;  /* Ensures the video fills the container, cropping if necessary */
       border: 1px solid #ccc;
       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    /* Styling for the bibliography list */
+    .bibliography {
+      margin-top: 40px;
+    }
+    .bibliography li {
+      margin-bottom: 15px;
     }
   </style>
 </head>
@@ -57,22 +64,75 @@
     </li>
     <li>
       <a href="https://www.biorxiv.org/content/10.1101/2025.01.17.633609v1" target="_blank">
-        Our new preprint, a collaboration led by Huabin Zhou from the Rosen Lab at UTSW Medical Center combining the new model with cryoET data to investigate how linker length modulates chromatin condensates
+        Our new preprint, a collaboration led by Huabin Zhou from the Rosen Lab at UTSW Medical Center combining the new model with cryoET to investigate how linker length modulates chromatin condensation
       </a>
     </li>
   </ul>
 
   <h2>🎞 Simulation Animations</h2>
+  <p>
+    The following simulation animations illustrate the dynamic behavior of chromatin condensates as predicted by our model.
+    25bp chromatin (pink) and similar NRLs following the 10N+5 pattern exhibit more dynamic, liquid like behavior as single fibers. This is explained by the DNA twist coming from the +5 (a half turn) limiting face-face stacking interaction.
+    In contrast, NRLs close to the 10N pattern e.g. 30bp (green), have a much less varied conformational ensemble as dilute fibers, as the full turns in the 10N linker promote the strong face-face stacking interactions..
+  </p>
   <div class="video-container">
-    <video controls>
+    <!-- Existing animations -->
+    <video controls autoplay loop muted>
       <source src="videos/edited_25.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-    <video controls>
+    <video controls autoplay loop muted>
       <source src="videos/edited_30.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
+    <!-- Additional videos -->
+    <video controls autoplay loop muted>
+      <source src="videos/animation3.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <video controls autoplay loop muted>
+      <source src="videos/animation4.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <video controls autoplay loop muted>
+      <source src="videos/animation5.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
   </div>
+
+  <h2 class="bibliography">Bibliography</h2>
+  <ol>
+    <li>
+      <a href="https://doi.org/10.1000/paper1" target="_blank">Paper Title 1</a>: A brief blurb describing the contribution of paper 1 to chromatin dynamics.
+    </li>
+    <li>
+      <a href="https://doi.org/10.1000/paper2" target="_blank">Paper Title 2</a>: A short summary of the findings and relevance to our model.
+    </li>
+    <li>
+      <a href="https://doi.org/10.1000/paper3" target="_blank">Paper Title 3</a>: Key insights on chromatin behavior as discussed in this study.
+    </li>
+    <li>
+      <a href="https://doi.org/10.1000/paper4" target="_blank">Paper Title 4</a>: Discussion on GPU acceleration techniques applied in residue-level modeling.
+    </li>
+    <li>
+      <a href="https://doi.org/10.1000/paper5" target="_blank">Paper Title 5</a>: Analysis of linker length effects on chromatin condensates.
+    </li>
+    <li>
+      <a href="https://doi.org/10.1000/paper6" target="_blank">Paper Title 6</a>: Experimental approaches and simulation results in chromatin dynamics.
+    </li>
+    <li>
+      <a href="https://doi.org/10.1000/paper7" target="_blank">Paper Title 7</a>: Insights into the molecular mechanisms driving chromatin condensate formation.
+    </li>
+    <li>
+      <a href="https://doi.org/10.1000/paper8" target="_blank">Paper Title 8</a>: Theoretical frameworks for understanding chromatin organization.
+    </li>
+    <li>
+      <a href="https://doi.org/10.1000/paper9" target="_blank">Paper Title 9</a>: A comprehensive review of computational methods in chromatin research.
+    </li>
+    <li>
+      <a href="https://doi.org/10.1000/paper10" target="_blank">Paper Title 10</a>: Implications of chromatin modeling for understanding nuclear architecture.
+    </li>
+  </ol>
 
   <p>
     Contact me (Kieran Russell) at:
@@ -84,3 +144,4 @@
   </p>
 </body>
 </html>
+
