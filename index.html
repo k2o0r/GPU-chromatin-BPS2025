@@ -24,19 +24,19 @@
     a:hover {
       text-decoration: underline;
     }
-    /* First set: side-by-side videos */
+    /* First set: side-by-side videos (first two animations) */
     .video-container {
       display: flex;
       justify-content: space-between;
       gap: 20px;
-      width: 80%;
+      width: 60%; /* reduced from 80% to make the videos smaller */
       flex-wrap: wrap;
       margin-bottom: 20px;
     }
     .video-container video {
-      flex: 1 1 45%;
+      flex: 1 1 40%; /* slightly reduced basis so each video is a bit smaller */
       width: 100%;
-      /* Maintain a portrait orientation: narrower and taller */
+      /* Portrait orientation: width:height ratio of 9:16 */
       aspect-ratio: 9 / 16;
       object-fit: cover;
       border: 1px solid #ccc;
@@ -57,6 +57,27 @@
       border: 1px solid #ccc;
       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     }
+    /* Standalone video container styling */
+    .standalone-video {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .standalone-video video {
+      width: 100%;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    /* Links & Contacts section styling */
+    .links-contacts {
+      margin: 40px 0;
+    }
+    .links-contacts ul {
+      list-style: none;
+      padding: 0;
+    }
+    .links-contacts li {
+      margin-bottom: 10px;
+    }
     /* Bibliography styling */
     .bibliography {
       margin-top: 40px;
@@ -71,112 +92,139 @@
     Further information about our poster from BPS2025: GPU-accelerated residue-level model for chromatin dynamics
   </h1>
   <p>Here are some resources related to my research:</p>
+  
+  <!-- Animations Section -->
+  <h2>🎞Animations</h2>
+  <p>
+    Single fiber Debye length Hamiltonian replica exchange simulations [1] of chromatin fibers reveal how linker length governs conformational ensembles for individual chromatin fibers. For 25bp chromatin (pink), 
+    the twist of DNA limits the formation of strong face-face stacking interactions leading to a variety of less regular and more extended structures. In contrast, for 30bp chromatin (green), DNA mechanics promotes stacking interactions leading to more regular
+    structures, dominated by face-face stacking.
+  </p>
+  <div class="video-container">
+    <video controls autoplay loop muted>
+      <source src="videos/edited_25.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <video controls autoplay loop muted>
+      <source src="videos/edited_30.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
-  <h2>🔗 Links</h2>
-  <ul>
-    <li>
-      <a href="https://bsky.app/profile/kieran-russell.bsky.social" target="_blank">My bluesky account</a>
-    </li>
-    <li>
-      <a href="https://www.biorxiv.org/content/10.1101/2025.01.17.633609v1" target="_blank">
-        Our new preprint, a collaboration led by Huabin Zhou from the Rosen Lab at UTSW Medical Center combining the new model with cryoET data to investigate how linker length modulates chromatin condensates
-      </a>
-    </li>
-  </ul>
+  <!-- Explanatory text between the two sets -->
+  <p>
+    Single fiber properties of chromatin carry through to the condensed phase, with simulations of tetrameric chromatin arrays revealing that 25bp chromatin forms more densely connected, less dynamic condensates, whilst 30bp
+    chromatin forms less dense and more dynamic condensates due to the 'burial' of 4/8 nucleosome faces in the regular stacked tetramer structure that dominates the conformations for 30bp.
+  </p>
+  <div class="video-vertical">
+    <video controls autoplay loop muted>
+      <source src="videos/25_coex_edits.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <video controls autoplay loop muted>
+      <source src="videos/30_coex_edits.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
-<h2>🎞Animations</h2>
-<p>
- Single fiber Debye length Hamiltonian replica exchange simulations [1] of chromatin fibers reveal how linker length governs conformational ensembles for individual chromatin fibers. For 25bp chromatin (pink), 
-  the twist of DNA limits the formation of strong face-face stacking interactions leading to a variety of less regular and more extended structures. In contrast, for 30bp chromatin (green), DNA mechanics promotes stacking interactions leading to more regular
-  structures, dominated by face-face stacking.
-</p>
-<div class="video-container">
-  <video controls autoplay loop muted>
-    <source src="videos/edited_25.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-  <video controls autoplay loop muted>
-    <source src="videos/edited_30.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-</div>
+  <!-- Explanatory text for the standalone animation -->
+  <p>
+    Summary video from the chromatin structure paper [7], showcasing <i>in vitro</i> and <i>in situ</i> experimental results consistent with the simulation results presented here!
+  </p>
+  <div class="standalone-video">
+    <video controls>
+      <source src="videos/animation5_compressed.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
-<!-- Explanatory text between the two sets -->
-<p>
-Single fiber properties of chromatin carry through to the condensed phase, with simulations of tetrameric chromatin arrays revealing that 25bp chromatin forms more densely connected, less dynamic condensates, whilst 30bp
-  chromatin forms less dense and more dynamic condensates due to the 'burial' of 4/8 nucleosome faces in the regular stacked tetramer structure that dominates the conformations for 30bp.
-</p>
+  <!-- New Links & Contacts Section (moved here before the bibliography) -->
+  <section class="links-contacts">
+    <h2>🔗 Links & Contacts</h2>
+    <ul>
+      <li>
+        <a href="https://bsky.app/profile/kieran-russell.bsky.social" target="_blank">My bluesky account, where the model paper and code will be posted as soon as the preprint is ready.</a>
+      </li>
+      <li>
+        <a href="https://www.biorxiv.org/content/10.1101/2025.01.17.633609v1" target="_blank">
+          Our new preprint, a collaboration led by Huabin Zhou from the Rosen Lab at UTSW Medical Center combining the new model with cryoET data to investigate how linker length modulates chromatin condensates. Though it's also in
+da bibliography :3
+        </a>
+      </li>
+    </ul>
+    <p>
+      Contact me (Kieran Russell) at:
+      <a href="mailto:kor20@cam.ac.uk">kor20@cam.ac.uk</a>
+    </p>
+    <p>
+      Contact my supervisor (Prof. Rosana Collepardo-Guevara) at:
+      <a href="mailto:rc597@cam.ac.uk">rc597@cam.ac.uk</a>
+    </p>
+  </section>
 
-<div class="video-vertical">
-  <video controls autoplay loop muted>
-    <source src="videos/25_coex_edits.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-  <video controls autoplay loop muted>
-    <source src="videos/30_coex_edits.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-</div>
-
-<!-- Explanatory text for the standalone animation5 -->
-<p>
-Summary video from the chromatin structure paper [7], showcasing <i>in vitro</i> and <i>in situ</i> experimental results consistent with the simulation results presented here!
-</p>
-
-<div class="standalone-video">
-  <video controls>
-    <source src="videos/animation5_compressed.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
-</div>
-
-
+  <!-- Bibliography Section -->
   <h2 class="bibliography">Bibliography</h2>
   <ol>
     <li>
-      <a href="https://doi.org/10.1038/s41467-021-23090-3" target="_blank">Nucleosome plasticity is a critical element of chromatin liquid–liquid phase separation and multivalent nucleosome interactions</a> Paper from our lab describing our multiscale chromatin model, including
-      the residue-resolution model that provides much inspiration for this model.
-    <li>
-      <a href="https://doi.org/10.1038/s41467-021-21377-z" target="_blank">Stability and folding pathways of tetra-nucleosome from six-dimensional free energy surface</a> A paper from the lab of Bin Zhang, where a different residue-resolution model is used to investigate the folding of tetrameric chromatin arrays.
-      This paper is where the symmetrized internucleosome distance features used in the analysis presented on the poster was proposed.
+      <a href="https://doi.org/10.1038/s41467-021-23090-3" target="_blank">
+        Nucleosome plasticity is a critical element of chromatin liquid–liquid phase separation and multivalent nucleosome interactions
+      </a>
+      – Paper from our lab describing our multiscale chromatin model, including the residue-resolution model that provides much inspiration for this model.
     </li>
     <li>
-      <a href="https://doi.org/10.1016/j.ceb.2022.02.001" target="_blank">Multiscale modelling of chromatin organisation: Resolving nucleosomes at near-atomistic resolution inside genes</a> Review article discussing multiscale simulations of chromatin with a detailed account of SOTA residue-resolution models.
+      <a href="https://doi.org/10.1038/s41467-021-21377-z" target="_blank">
+        Stability and folding pathways of tetra-nucleosome from six-dimensional free energy surface
+      </a>
+      – A paper from the lab of Bin Zhang, where a different residue-resolution model is used to investigate the folding of tetrameric chromatin arrays. This paper is where the symmetrized internucleosome distance features used in the analysis presented on the poster was proposed.
     </li>
     <li>
-      <a href="https://doi.org/10.1021/acs.jpcb.3c06662" target="_blank">OpenMM 8: Molecular Dynamics Simulation with Machine Learning Potentials</a> The latest OpenMM publication, detailing new features of the GPU-accelerated MD package OpenMM.
+      <a href="https://doi.org/10.1016/j.ceb.2022.02.001" target="_blank">
+        Multiscale modelling of chromatin organisation: Resolving nucleosomes at near-atomistic resolution inside genes
+      </a>
+      – Review article discussing multiscale simulations of chromatin with a detailed account of SOTA residue-resolution models.
     </li>
     <li>
-      <a href="https://doi.org/10.1093/nar/gkae444" target="_blank">CGeNArate: a sequence-dependent coarse-grained model of DNA for accurate atomistic MD simulations of kb-long duplexes</a> Paper from the lab of Modesto Orozco introducing the particle based coarse-grained DNA model adapted
-      for this chromatin model.
+      <a href="https://doi.org/10.1021/acs.jpcb.3c06662" target="_blank">
+        OpenMM 8: Molecular Dynamics Simulation with Machine Learning Potentials
+      </a>
+      – The latest OpenMM publication, detailing new features of the GPU-accelerated MD package OpenMM.
     </li>
     <li>
-      <a href="https://doi.org/10.1016/j.jmb.2007.11.063" target="_blank">Coarse-grained models for simulations of multiprotein complexes: application to ubiquitin binding</a> Kim & Hummer's 2008 paper introducing their residue-level protein model. This protein
-      model was used in [1] and now also this work.
+      <a href="https://doi.org/10.1093/nar/gkae444" target="_blank">
+        CGeNArate: a sequence-dependent coarse-grained model of DNA for accurate atomistic MD simulations of kb-long duplexes
+      </a>
+      – Paper from the lab of Modesto Orozco introducing the particle based coarse-grained DNA model adapted for this chromatin model.
     </li>
     <li>
-      <a href=" https://doi.org/10.1101/2025.01.17.633609" target="_blank">Multi-scale structure of chromatin condensates rationalizes phase separation and material properties</a> Our new preprint, a collaboration with the labs of Michael Rosen and Elizabeth Villa combining novel cryoET techniques and this powerful GPU-accelerated model
-      to provide unprecedented structural details on how linker length modulates the structure of condensed chromatin.
+      <a href="https://doi.org/10.1016/j.jmb.2007.11.063" target="_blank">
+        Coarse-grained models for simulations of multiprotein complexes: application to ubiquitin binding
+      </a>
+      – Kim & Hummer's 2008 paper introducing their residue-level protein model. This protein model was used in [1] and now also this work.
     </li>
     <li>
-      <a href="https://doi.org/10.1038/emboj.2012.80" target="_blank">Short nucleosome repeats impose rotational modulations on chromatin fibre folding</a> Paper from the lab of Sergey Grigoriyev where sedimentation coefficients
-      from single fibers of varying NRL are presented. This experimental data is used to validate the model.
+      <a href="https://doi.org/10.1101/2025.01.17.633609" target="_blank">
+        Multi-scale structure of chromatin condensates rationalizes phase separation and material properties
+      </a>
+      – Our new preprint, a collaboration with the labs of Michael Rosen and Elizabeth Villa combining novel cryoET techniques and this powerful GPU-accelerated model to provide unprecedented structural details on how linker length modulates the structure of condensed chromatin.
     </li>
     <li>
-      <a href="https://doi.org/10.1101/2024.12.23.627571" target="_blank">Nucleosome Spacing Can Fine-Tune Higher Order Chromatin Assembly</a> Another new pre-print from the collaboration between our lab and the lab of Michael Rosen. Here extensive simulations 
-      using the minimal model are combined with experimental results to investigate the effects of nucleosome spacing and its alteration by remodellers on condensed phase behavior of chromatin.
+      <a href="https://doi.org/10.1038/emboj.2012.80" target="_blank">
+        Short nucleosome repeats impose rotational modulations on chromatin fibre folding
+      </a>
+      – Paper from the lab of Sergey Grigoriyev where sedimentation coefficients from single fibers of varying NRL are presented. This experimental data is used to validate the model.
     </li>
     <li>
-      <a href="https://doi.org/10.3390/molecules25204705" target="_blank">Expansion of Intrinsically Disordered Proteins Increases the Range of Stability of Liquid–Liquid Phase Separation</a>: Paper from our lab exploring how single-molecule properties of IDPs contribute to different LLPS behavior.
+      <a href="https://doi.org/10.1101/2024.12.23.627571" target="_blank">
+        Nucleosome Spacing Can Fine-Tune Higher Order Chromatin Assembly
+      </a>
+      – Another new pre-print from the collaboration between our lab and the lab of Michael Rosen. Here extensive simulations using the minimal model are combined with experimental results to investigate the effects of nucleosome spacing and its alteration by remodellers on condensed phase behavior of chromatin.
+    </li>
+    <li>
+      <a href="https://doi.org/10.3390/molecules25204705" target="_blank">
+        Expansion of Intrinsically Disordered Proteins Increases the Range of Stability of Liquid–Liquid Phase Separation
+      </a>
+      – Paper from our lab exploring how single-molecule properties of IDPs contribute to different LLPS behavior.
+    </li>
   </ol>
-
-  <p>
-    Contact me (Kieran Russell) at:
-    <a href="mailto:kor20@cam.ac.uk">kor20@cam.ac.uk</a>
-  </p>
-  <p>
-    Contact my supervisor (Prof. Rosana Collepardo-Guevara) at:
-    <a href="mailto:rc597@cam.ac.uk">rc597@cam.ac.uk</a>
-  </p>
 </body>
 </html>
