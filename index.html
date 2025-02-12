@@ -1,3 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPU Accelerated Chromatin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    a {
+      display: block;
+      margin: 10px 0;
+      color: #1a0dab;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* First set: side-by-side videos */
+    .video-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .video-container video {
+      flex: 1 1 45%;
+      width: 100%;
+      /* Maintain a portrait orientation: narrower and taller */
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    /* Second set: vertically stacked videos with a 6:1 aspect ratio */
+    .video-vertical {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .video-vertical video {
+      width: 100%;
+      aspect-ratio: 6 / 1;
+      object-fit: cover;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    /* Bibliography styling */
+    .bibliography {
+      margin-top: 40px;
+    }
+    .bibliography li {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    Further information about our poster from BPS2025: GPU-accelerated residue-level model for chromatin dynamics
+  </h1>
+  <p>Here are some resources related to my research:</p>
+
+  <h2>🔗 Links</h2>
+  <ul>
+    <li>
+      <a href="https://bsky.app/profile/kieran-russell.bsky.social" target="_blank">My bluesky account</a>
+    </li>
+    <li>
+      <a href="https://www.biorxiv.org/content/10.1101/2025.01.17.633609v1" target="_blank">
+        Our new preprint, a collaboration led by Huabin Zhou from the Rosen Lab at UTSW Medical Center combining the new model with cryoET data to investigate how linker length modulates chromatin condensates
+      </a>
+    </li>
+  </ul>
+
 <h2>🎞 Simulation Animations</h2>
 <p>
   The following simulation animations illustrate the dynamic behavior of chromatin condensates as predicted by our model.
@@ -44,3 +130,48 @@
   </video>
 </div>
 
+
+  <h2 class="bibliography">Bibliography</h2>
+  <ol>
+    <li>
+      <a href="https://doi.org/10.1000/paper1" target="_blank">Paper Title 1</a>: A brief blurb describing the contribution of paper 1 to chromatin dynamics.
+    </li>
+    <li>
+      <a href="https://doi.org/10.1000/paper2" target="_blank">Paper Title 2</a>: A short summary of the findings and relevance to our model.
+    </li>
+    <li>
+      <a href="https://doi.org/10.1000/paper3" target="_blank">Paper Title 3</a>: Key insights on chromatin behavior as discussed in this study.
+    </li>
+    <li>
+      <a href="https://doi.org/10.1000/paper4" target="_blank">Paper Title 4</a>: Discussion on GPU acceleration techniques applied in residue-level modeling.
+    </li>
+    <li>
+      <a href="https://doi.org/10.1000/paper5" target="_blank">Paper Title 5</a>: Analysis of linker length effects on chromatin condensates.
+    </li>
+    <li>
+      <a href="https://doi.org/10.1000/paper6" target="_blank">Paper Title 6</a>: Experimental approaches and simulation results in chromatin dynamics.
+    </li>
+    <li>
+      <a href="https://doi.org/10.1000/paper7" target="_blank">Paper Title 7</a>: Insights into the molecular mechanisms driving chromatin condensate formation.
+    </li>
+    <li>
+      <a href="https://doi.org/10.1000/paper8" target="_blank">Paper Title 8</a>: Theoretical frameworks for understanding chromatin organization.
+    </li>
+    <li>
+      <a href="https://doi.org/10.1000/paper9" target="_blank">Paper Title 9</a>: A comprehensive review of computational methods in chromatin research.
+    </li>
+    <li>
+      <a href="https://doi.org/10.1000/paper10" target="_blank">Paper Title 10</a>: Implications of chromatin modeling for understanding nuclear architecture.
+    </li>
+  </ol>
+
+  <p>
+    Contact me (Kieran Russell) at:
+    <a href="mailto:kor20@cam.ac.uk">kor20@cam.ac.uk</a>
+  </p>
+  <p>
+    Contact my supervisor (Prof. Rosana Collepardo-Guevara) at:
+    <a href="mailto:rc597@cam.ac.uk">rc597@cam.ac.uk</a>
+  </p>
+</body>
+</html>
