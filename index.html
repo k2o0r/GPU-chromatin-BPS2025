@@ -29,7 +29,6 @@
       display: flex;
       justify-content: space-between;
       gap: 20px;
-      aspect-ratio: 1 / 1;      /* Forces a square container */
       width: 100%;
       flex-wrap: wrap; /* Allows videos to wrap on smaller screens */
       margin-bottom: 20px;
@@ -38,6 +37,7 @@
       flex: 1 1 45%; /* Each video takes roughly 45% of the width */
       width: 100%;
       height: auto;
+      aspect-ratio: 2 / 1;      /* Forces a square container */
       border: 1px solid #ccc;
       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     }
