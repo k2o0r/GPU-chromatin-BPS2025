@@ -1,32 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poster Page</title>
-    <style>
-        body { font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; }
-        h1 { color: #333; }
-        a { display: block; margin: 10px 0; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poster Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    a {
+      display: block;
+      margin: 10px 0;
+      color: #1a0dab;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* Flex container for side-by-side videos */
+    .video-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap; /* Allows videos to wrap on smaller screens */
+      margin-bottom: 20px;
+    }
+    .video-container video {
+      flex: 1 1 45%; /* Each video takes roughly 45% of the width */
+      width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 <body>
-    <h1>Further information regarding our poster at BPS, GPU-accelerated residue-level model for chromatin dynamics </h1>
-    <p>Here are some resources related to my research: </p>
-    
-    <h2>🔗 Links</h2>
-    <ul>
-        <li><a href="https://example.com/paper.pdf" target="_blank">My bluesky account</a></li>
-        <li><a href="https://example.com/simulation" target="_blank">Our new preprint combining the presented model with cryoET data to investigate chromatin condensates </a></li>
-    </ul>
+  <h1>
+    Further information regarding our poster at BPS, GPU-accelerated residue-level model for chromatin dynamics
+  </h1>
+  <p>Here are some resources related to my research:</p>
 
-    <h2>🎞 Simulation Animations</h2>
-    <video width="100%" controls>
-        <source src="animation.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+  <h2>🔗 Links</h2>
+  <ul>
+    <li>
+      <a href="https://example.com/paper.pdf" target="_blank">My bluesky account</a>
+    </li>
+    <li>
+      <a href="https://example.com/simulation" target="_blank">
+        Our new preprint combining the presented model with cryoET data to investigate chromatin condensates
+      </a>
+    </li>
+  </ul>
+
+  <h2>🎞 Simulation Animations</h2>
+  <div class="video-container">
+    <video controls>
+      <source src="videos/edited_25bp.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
     </video>
+    <video controls>
+      <source src="videos/edited_30bp.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
-    <p>Contact me (Kieran Russell) at: <a href="mailto:kor20@cam.ac.uk">kor20@cam.ac.uk</a></p>
-    <p>Contact my supervisor (Prof. Rosana Collepardo-Guevara) at: <a href="rc597@cam.ac.uk">rc597@cam.ac.uk</a></p>
+  <p>
+    Contact me (Kieran Russell) at:
+    <a href="mailto:kor20@cam.ac.uk">kor20@cam.ac.uk</a>
+  </p>
+  <p>
+    Contact my supervisor (Prof. Rosana Collepardo-Guevara) at:
+    <a href="mailto:rc597@cam.ac.uk">rc597@cam.ac.uk</a>
+  </p>
 </body>
 </html>
