@@ -29,7 +29,7 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  width: 60%; /* you can adjust this as needed */,
+  width: 100%; /* you can adjust this as needed */,
   max-width: 300px;       /* or any size that fits your layout */
   max-height: 533px;      /* maintaining the 9:16 ratio, e.g., 300px * (16/9) ≈ 533px */
   flex-wrap: wrap;
@@ -38,7 +38,7 @@
 
 .video-container video {
   /* Allow the flex item to size itself. */
-  flex: 1 1 40%;
+  flex: 1 1 20%;
   /* Remove the width: 100% property to avoid forcing full width */
   aspect-ratio: 9 / 16;
   width: 60%;
