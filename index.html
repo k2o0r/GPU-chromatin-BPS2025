@@ -24,25 +24,40 @@
     a:hover {
       text-decoration: underline;
     }
-    /* Flex container for side-by-side videos */
+    /* First set: side-by-side videos */
     .video-container {
       display: flex;
       justify-content: space-between;
       gap: 20px;
       width: 100%;
-      flex-wrap: wrap; /* Allows videos to wrap on smaller screens */
+      flex-wrap: wrap;
       margin-bottom: 20px;
     }
     .video-container video {
-      flex: 1 1 45%; /* Each video takes roughly 45% of the container's width */
+      flex: 1 1 45%;
       width: 100%;
       /* Maintain a portrait orientation: narrower and taller */
-      aspect-ratio: 9 / 16;  
-      object-fit: cover;  /* Ensures the video fills the container, cropping if necessary */
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
       border: 1px solid #ccc;
       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     }
-    /* Styling for the bibliography list */
+    /* Second set: vertically stacked videos with a 6:1 aspect ratio */
+    .video-vertical {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .video-vertical video {
+      width: 100%;
+      aspect-ratio: 6 / 1;
+      object-fit: cover;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    /* Bibliography styling */
     .bibliography {
       margin-top: 40px;
     }
@@ -64,7 +79,7 @@
     </li>
     <li>
       <a href="https://www.biorxiv.org/content/10.1101/2025.01.17.633609v1" target="_blank">
-        Our new preprint, a collaboration led by Huabin Zhou from the Rosen Lab at UTSW Medical Center combining the new model with cryoET to investigate how linker length modulates chromatin condensation
+        Our new preprint, a collaboration led by Huabin Zhou from the Rosen Lab at UTSW Medical Center combining the new model with cryoET data to investigate how linker length modulates chromatin condensates
       </a>
     </li>
   </ul>
@@ -72,11 +87,9 @@
   <h2>🎞 Simulation Animations</h2>
   <p>
     The following simulation animations illustrate the dynamic behavior of chromatin condensates as predicted by our model.
-    25bp chromatin (pink) and similar NRLs following the 10N+5 pattern exhibit more dynamic, liquid like behavior as single fibers. This is explained by the DNA twist coming from the +5 (a half turn) limiting face-face stacking interaction.
-    In contrast, NRLs close to the 10N pattern e.g. 30bp (green), have a much less varied conformational ensemble as dilute fibers, as the full turns in the 10N linker promote the strong face-face stacking interactions..
+    These animations loop continuously to provide a seamless demonstration of the system in action.
   </p>
   <div class="video-container">
-    <!-- Existing animations -->
     <video controls autoplay loop muted>
       <source src="videos/edited_25.mp4" type="video/mp4" />
       Your browser does not support the video tag.
@@ -85,7 +98,6 @@
       <source src="videos/edited_30.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-    <!-- Additional videos -->
     <video controls autoplay loop muted>
       <source src="videos/animation3.mp4" type="video/mp4" />
       Your browser does not support the video tag.
@@ -96,6 +108,23 @@
     </video>
     <video controls autoplay loop muted>
       <source src="videos/animation5.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Explanatory text between the two sets -->
+  <p>
+    In addition to the above animations, the following alternative view displays a vertical arrangement.
+    Here, the "25" variant is presented above the "30" variant to emphasize their differences.
+  </p>
+
+  <div class="video-vertical">
+    <video controls autoplay loop muted>
+      <source src="videos/25_coex_edits.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <video controls autoplay loop muted>
+      <source src="videos/30_coex_edits.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
@@ -144,4 +173,3 @@
   </p>
 </body>
 </html>
-
