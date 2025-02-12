@@ -24,24 +24,25 @@
     a:hover {
       text-decoration: underline;
     }
-    /* First set: side-by-side videos (first two animations) */
-    .video-container {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      width: 60%; /* reduced from 80% to make the videos smaller */
-      flex-wrap: wrap;
-      margin-bottom: 20px;
-    }
-    .video-container video {
-      flex: 1 1 40%; /* slightly reduced basis so each video is a bit smaller */
-      width: 100%;
-      /* Portrait orientation: width:height ratio of 9:16 */
-      aspect-ratio: 9 / 16;
-      object-fit: cover;
-      border: 1px solid #ccc;
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    }
+    
+   .video-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 60%; /* you can adjust this as needed */
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.video-container video {
+  /* Allow the flex item to size itself. */
+  flex: 1 1 40%;
+  /* Remove the width: 100% property to avoid forcing full width */
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
     /* Second set: vertically stacked videos with a 6:1 aspect ratio */
     .video-vertical {
       display: flex;
