@@ -8,7 +8,7 @@
     body {
       font-family: Arial, sans-serif;
       max-width: 800px;
-      margin: auto;
+      margin: 0 auto;
       padding: 20px;
       line-height: 1.6;
     }
@@ -30,16 +30,13 @@
       display: flex;
       justify-content: space-between;
       gap: 20px;
-      width: 100%; /* Adjust as needed */
-      max-width: 300px;       /* Maximum width for the container */
-      max-height: 533px;      /* Maintaining the 9:16 ratio: 300px * (16/9) ≈ 533px */
-      flex-wrap: wrap;
+      /* Fix the container width at 300px (adjust as needed) */
+      width: 300px;
       margin-bottom: 20px;
     }
-    
     .video-container video {
-      /* Let the flex properties control sizing */
-      flex: 1 1 20%;
+      /* With a 20px gap and two videos, each video gets about half the container width */
+      width: calc(50% - 10px);
       aspect-ratio: 9 / 16;
       object-fit: cover;
       border: 1px solid #ccc;
@@ -112,11 +109,7 @@
       <source src="videos/edited_25.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-    <video controls autoplay loop muted>
-      <source src="videos/edited_30.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
+   
 
   <!-- Explanatory text between the two sets -->
   <p>
